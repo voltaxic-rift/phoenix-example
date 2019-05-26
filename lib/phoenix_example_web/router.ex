@@ -7,5 +7,6 @@ defmodule PhoenixExampleWeb.Router do
 
   scope "/api", PhoenixExampleWeb do
     pipe_through :api
+    resources "/users", UserController, except: [:new, :edit]
   end
 end
