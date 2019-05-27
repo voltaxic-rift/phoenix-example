@@ -2,6 +2,10 @@ FROM elixir:1.8.1
 
 ENV LANG C.UTF-8
 ENV TZ Asia/Tokyo
+ENV NODE_VERSION 10.x
+
+RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION} | bash && \
+    apt-get install -y nodejs inotify-tools
 
 ARG uid=1000
 ARG gid=1000
