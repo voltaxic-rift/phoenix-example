@@ -4,6 +4,8 @@ build:
 	@$(FIG) build
 up:
 	@$(FIG) up -d
+down:
+	@$(FIG) down
 exec:
 	@$(FIG) exec app bash
 run:
